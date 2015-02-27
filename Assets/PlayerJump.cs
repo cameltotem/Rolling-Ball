@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerJump : MonoBehaviour {
 	public float force;
 	private bool isFalling =false;
+	public AudioSource jump;
 	
 	void Start () {
 		
@@ -17,6 +18,7 @@ public class PlayerJump : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Space) && isFalling == false)
 		{
 			rigidbody.AddForce(ballMovement1 * force );
+			jump.Play();
 		}
 		isFalling = true;
 	}
