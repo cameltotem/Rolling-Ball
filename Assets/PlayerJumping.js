@@ -10,11 +10,11 @@ private var isFalling = false;
 function Update () {
 var rotation: float = Input.GetAxis ("Horizontal") * rotationSpeed;
 rotation *= Time.deltaTime;
-rigidbody.AddRelativeTorque (Vector3.back * rotation);
+GetComponent.<Rigidbody>().AddRelativeTorque (Vector3.back * rotation);
 
 if (Input.GetKeyDown(KeyCode.Space) && isFalling == false)
 {
-rigidbody.velocity.y = jumpHeight;
+GetComponent.<Rigidbody>().velocity.y = jumpHeight;
 }
 isFalling = true;
 }

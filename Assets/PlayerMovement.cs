@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		Vector3 ballMovement = new Vector3(moveHorizontal,0.0f,moveVertical);
 
-		rigidbody.AddForce(ballMovement * force);
+		GetComponent<Rigidbody>().AddForce(ballMovement * force);
 
 		//InvokeRepeating("Jumpe",2,0.3f);
 

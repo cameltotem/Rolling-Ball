@@ -17,6 +17,7 @@ public class Respawn : MonoBehaviour {
 		{
 
 			Player.transform.position = SpawnPoint.position;
+			Player.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
 
 
