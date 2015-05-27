@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerJump : MonoBehaviour {
 	public float force;
 	private bool isFalling =false;
 	public AudioSource jump;
 	public float timer = 0.0f;
+	public Text time;
 	
 	void Start () {
 		
@@ -16,6 +18,8 @@ public class PlayerJump : MonoBehaviour {
 		float Jump = Input.GetAxis("Jump");
 		Vector3 ballMovement1 = new Vector3(0.0f, Jump, 0.0f);
 		timer += Time.deltaTime;
+
+
 		if(timer <= 0)
 		{
 			timer = 0;
@@ -29,9 +33,13 @@ public class PlayerJump : MonoBehaviour {
 		}
 		isFalling = true;
 	}
+
+
 	public void OnGUI()
 	{
-		GUI.Box(new Rect(700,100,50,20), "" + timer.ToString("0.00"));
+		GUI.Box(new Rect(700,100,100,40), "" + timer.ToString("0.00"));
+	
+
 	}
 	void OnCollisionStay ()
 	{

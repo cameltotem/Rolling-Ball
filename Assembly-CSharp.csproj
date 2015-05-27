@@ -51,6 +51,7 @@
      <Compile Include="Assets\PlayerJump.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Respawn.cs" />
+     <Compile Include="Assets\ShowHighScore.cs" />
      <Compile Include="Assets\StartLevel.cs" />
      <Compile Include="Assets\TimerController.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
