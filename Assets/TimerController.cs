@@ -35,7 +35,7 @@ public class TimerController : MonoBehaviour {
 	}
 	void OnGUI()
 	{
-		GUI.Window(0, new Rect(530,320,375,150),
+		GUI.Window(0, new Rect(630,420,375,150),
 		           RegisterWindow,"Register new highscore");
 
 
@@ -49,7 +49,7 @@ public class TimerController : MonoBehaviour {
 		username = GUI.TextField( new Rect(25,60,325,30), username);
 		
 		
-		if(GUI.Button( new Rect(30,95,110,50), "Save time"))
+		if(GUI.Button( new Rect(130,95,110,50), "Save time"))
 			StartCoroutine(handleRegister(username));
 		
 		GUI.Label(new Rect(55,222,250,100), problem);
@@ -63,13 +63,15 @@ public class TimerController : MonoBehaviour {
 	{
 		if (string.IsNullOrEmpty(username)) {
 			return string.IsNullOrEmpty(username);
-			}
 
+		
+		
 
+		}
 		System.TimeSpan t = System.TimeSpan.FromSeconds (Time.time);
-        string score = string.Format ("{0:D2}m{1:D2}s", t.Minutes,t.Seconds);
-	
+		string score = string.Format ("{0:D2}s", t.Seconds);
 
+	
 
 		string register_URL = registerURL + "?username=" + username + "&score=" + score;
 		WWW registerReader = new WWW (register_URL);

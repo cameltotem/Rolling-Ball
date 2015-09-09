@@ -25,8 +25,6 @@ public class ShowHighScore : MonoBehaviour {
 
 	IEnumerator showhighscore()
 	{
-		
-
 		highscore.text = "Loading scores";
 
 		WWW hs_get = new WWW (highscoreURL);
