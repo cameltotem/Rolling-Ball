@@ -5,7 +5,6 @@ var Audio : AudioSource;
 var FinishLine: GameObject;
 var FinishButton: GameObject;
 var FinishText: GameObject;
-var FinishImage: GameObject;
 var FinishTryAgain : GameObject;
 var FinishSaveHighScore: GameObject;
 var FinishShowHighScore: GameObject;
@@ -22,7 +21,6 @@ if(col.tag == "Player")
 
 FinishButton.SetActive(true);
 FinishText.SetActive(true);
-FinishImage.SetActive(true);
 FinishTryAgain.SetActive(true);
 FinishSaveHighScore.SetActive(true);
 FinishShowHighScore.SetActive(true);
